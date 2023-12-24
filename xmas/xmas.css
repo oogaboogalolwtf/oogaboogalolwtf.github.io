@@ -1,0 +1,109 @@
+:root {
+    --golden: #d4af37;
+}
+
+body {
+    background-image: url('./images/bg-mobile4.jpg');
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
+    color: white;
+}
+
+footer {
+    margin-top:20px;
+    background-color: white;
+    color: red;
+    font-family: cursive;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+header p {
+    margin-top: -5px;
+    background: rgba(255, 0, 0, 0.7);
+    /* background: rgba(212, 175, 55, 0.7); */
+    border-radius: 20px;
+    padding: 20px;
+}
+
+header xmas {
+    display: block;
+    text-align: center;
+    font-size: xxx-large;
+}
+
+xmas {
+    font-family: 'xmas';
+}
+
+#beautiful {
+    font-size: medium;
+}
+
+#her {
+    position: relative;
+    border-radius: 9999px;
+    height: 100px;
+    outline: 5px solid var(--golden);
+    margin-top: -25px;
+    margin-left: 28px;
+    rotate: 11deg;
+}
+
+#nametagDiv {
+    width: 400px;
+    margin-bottom: 50px;
+}
+
+#nametag {
+    height: 150px;
+    rotate: 99deg;
+    margin-top: 30px;
+    margin-left: -50px;
+    position: absolute;
+}
+
+#nametagText {
+    font-size: 13px;
+    padding-right: 200px;
+    padding-top: 80px;
+    rotate: 9deg;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+
+#poemDiv {
+    margin-top: 200px;
+    background: rgba(255, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    /* font-size: 15px; */
+}
+
+/* Responsive */
+
+@media (min-width: 640px) {
+    body {
+        background-image: url('./images/bg.jpg');
+        background-size: 100vw 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #helloThere {
+        transform: none;
+    }
+
+    #greetings {
+        font-size: 120px;
+    }
+}
+
+/* Useless shit */
+
+@font-face {
+    font-family: 'xmas';
+    src: url("../font/xmas.ttf") format("truetype");
+}

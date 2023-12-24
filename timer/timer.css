@@ -1,0 +1,75 @@
+body {
+  background-image: url('./images/bg-mobile.jpg');
+  background-size: 100vw 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+  color: white;
+}
+
+xmas {
+  font-family: 'xmas';
+  font-weight: lighter;
+  font-size: larger;
+}
+
+#helloThere {
+  margin-top: 225px;
+  text-align: center;
+}
+
+/* Ticker */
+
+#ticker {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  color: red;
+  font-size: xxx-large;
+  font-weight: 900;
+  text-align: center;
+}
+
+#hour {
+  background-color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+
+#min {
+  background-color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+
+#sec {
+  background-color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+
+/* Responsive */
+
+@media (min-width: 640px) {
+  body {
+    background-image: url('./images/bg.jpg');
+    background-size: 100vw 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #helloThere {
+    transform: none;
+  }
+}
+
+/* Useless shit */
+
+@font-face {
+  font-family: 'xmas';
+  src: url("../font/xmas.ttf") format("truetype");
+}
