@@ -26,7 +26,7 @@ function mainLoop() {
     const timeLeft = updateTime();
     if (timeLeft < 0) {
         clearInterval(clockLoop);
-        window.location.replace('something something');
+        window.location.replace('https://oogaboogalolwtf.github.io/xmas/xmas.html');
     }
 }
 
