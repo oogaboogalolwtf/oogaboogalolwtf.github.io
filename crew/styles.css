@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@property --dark-bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: black;
+}
+
+@property --dark-text-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+}
+
+@property --light-bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+}
+
+@property --light-text-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: black;
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+    color: light-dark(var(--light-text-color), var(--dark-text-color));
+    font-family: 'Inter';
+}
+
+#crew-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#crew-info {
+    display: none;
+    text-align: center;
+    margin: 4rem;
+}
+
+.crew-item {
+    align-items: center;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px;
+    max-width: 300px;
+    padding: 10px;
+}
+
+.crew-item-pic {
+    background-color: #898989;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border-radius: 9999px;
+    margin-right: 10px;
+
+    height: 4rem;
+    width: 4rem;
+
+    /* padding: 0.7rem; */
+    text-align: center;
+    line-height: 100%;
+}
+
+.crew-item-pic>svg {
+    margin-top: 10%;
+}
+
+.crew-item-text-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.crew-item-text-role {
+    color: grey;
+}
+
+#crew-title {
+    margin-left: 30px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    text-decoration-color: aqua;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+}
+
+#ham-menu {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    background-color: grey;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+}
+
+#logo-text {
+    display: none;
+}
+
+main {
+    margin-top: 20px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media (max-width: 640px) {
+    #crew-container {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    header {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    #hammed-nav {
+        background-color: #222222;
+        border-radius: 20px;
+        display: none;
+        opacity: 0.0;
+        padding-bottom: 15px;
+        padding-left: 40%;
+        padding-right: 35%;
+        padding-top: 15px;
+        position: absolute;
+        transition: all 2.3s;
+        visibility: hidden;
+
+        /* centering */
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+    }
+
+    #hammed-nav.active {
+        visibility: visible;
+        display: block;
+        opacity: 1.0;
+        transition: all 2.3s;
+    }
+
+    #ham-menu {
+        display: block;
+        transform: translateY(48%);
+        z-index: 1;
+    }
+
+    #ham-menu.active {
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+
+    #ham-menu div {
+        background-color: #B39DDB;
+        border-radius: 20px;
+        height: 5px;
+        margin-top: 3px;
+        width: 1.7rem;
+        transition: all 0.3s;
+    }
+
+    #ham-menu.active div:nth-child(1) {
+        transform: translateY(150%) rotate(45deg);
+    }
+
+    #ham-menu.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #ham-menu.active div:nth-child(3) {
+        transform: translateY(-150%) rotate(-45deg);
+    }
+
+    #logo-text {
+        display: block;
+        color: red;
+        font-family: 'Josefin Sans';
+        margin-top: auto;
+        margin-bottom: auto;
+
+        /* centering */
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        top: 0;
+        bottom: 0;
+        height: fit-content;
+    }
+}

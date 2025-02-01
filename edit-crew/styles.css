@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@property --dark-bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: black;
+}
+
+@property --dark-text-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+}
+
+@property --light-bg-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: white;
+}
+
+@property --light-text-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: black;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+body {
+    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+    color: light-dark(var(--light-text-color), var(--dark-text-color));
+    font-family: 'Inter';
+}
+
+#bottom {
+    position: fixed;
+    bottom: 20px;
+
+    /* centering */
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#bottom button {
+    background: linear-gradient(to bottom, #7ED6F3, #B39DDB);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1px;
+}
+
+#bottom button span {
+    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+    border-radius: 10px;
+    display: block;
+    font-size: 1rem;
+    padding: 7px;
+}
+
+
+#crew-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 0.5rem;
+    margin-bottom: 4rem;
+}
+
+.crew-item {
+    align-items: center;
+    background-color: #2f2f2f;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px;
+    max-width: 300px;
+    padding: 10px;
+
+    position: relative;
+}
+
+.crew-item-delete-btn {
+    position: absolute;
+
+    width: 2rem;
+    height: 2rem;
+    padding: 0.35rem;
+
+    border-radius: 9999px;
+    right: -0.5rem;
+    top: -0.5rem;
+    cursor: pointer;
+}
+
+.crew-item-pic {
+    background-color: #898989;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 9999px;
+    margin-right: 10px;
+
+    height: 4rem;
+    width: 4rem;
+}
+
+.crew-item-pic input {
+    cursor: pointer;
+    opacity: 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+.crew-item-text-name {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.crew-item-text-role {
+    margin-left: 5px;
+    color: grey;
+}
+
+#crew-title {
+    background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+    border: none;
+    padding: 0.5rem;
+    margin-left: 30px;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    text-decoration-color: aqua;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+}
+
+#crew-title:disabled {
+    color: light-dark(var(--light-text-color), var(--dark-text-color));
+}
+
+#crew-title.show-border {
+    border-color: #888888;
+    border-radius: 0.3rem;
+    border-style: solid;
+    border-width: 0.15rem;
+}
+
+.dismiss-btn {
+    background-color: red;
+    display: block;
+
+    border: none;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.7rem;
+}
+
+#ham-menu {
+    display: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logo {
+    background-color: grey;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+}
+
+#logo-text {
+    display: none;
+}
+
+main {
+    margin-top: 20px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.role-label {
+    color: grey;
+}
+
+.warning-container {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000e5;
+}
+
+.warning-content {
+    background-color: #333333;
+    border-radius: 0.7rem;
+    padding: 1rem;
+    width: fit-content;
+    margin: auto;
+}
+
+@media (max-width: 800px) {
+    #crew-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 640px) {
+    header {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    #hammed-nav {
+        background-color: #222222;
+        border-radius: 20px;
+        display: none;
+        opacity: 0.0;
+        padding-bottom: 15px;
+        padding-left: 40%;
+        padding-right: 35%;
+        padding-top: 15px;
+        position: absolute;
+        transition: all 2.3s;
+        visibility: hidden;
+
+        /* centering */
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+    }
+
+    #hammed-nav.active {
+        visibility: visible;
+        display: block;
+        opacity: 1.0;
+        transition: all 2.3s;
+    }
+
+    #ham-menu {
+        display: block;
+        transform: translateY(48%);
+        z-index: 1;
+    }
+
+    #ham-menu.active {
+        position: absolute;
+        left: 5%;
+        top: 20%;
+    }
+
+    #ham-menu div {
+        background-color: #B39DDB;
+        border-radius: 20px;
+        height: 5px;
+        margin-top: 3px;
+        width: 1.7rem;
+        transition: all 0.3s;
+    }
+
+    #ham-menu.active div:nth-child(1) {
+        transform: translateY(150%) rotate(45deg);
+    }
+
+    #ham-menu.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    #ham-menu.active div:nth-child(3) {
+        transform: translateY(-150%) rotate(-45deg);
+    }
+
+    #logo-text {
+        display: block;
+        color: red;
+        font-family: 'Josefin Sans';
+        margin-top: auto;
+        margin-bottom: auto;
+
+        /* centering */
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        top: 0;
+        bottom: 0;
+        height: fit-content;
+    }
+}

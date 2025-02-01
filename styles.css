@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+@property --dark-bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: black;
+}
+
+@property --dark-text-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: white;
+}
+
+@property --light-bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: white;
+}
+
+@property --light-text-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: black;
+}
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+  color: light-dark(var(--light-text-color), var(--dark-text-color));
+  font-family: 'Inter';
+}
+
+#body-image {
+  background-color: grey;
+  border-radius: 10px;
+  margin-left: 10px;
+  width: 50%;
+}
+
+#button1 {
+  /* centering the content inside first */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.1rem;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #7ED6F3, #B39DDB);
+}
+
+#button1 a {
+  border-radius: 9px;
+  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+  color: light-dark(var(--light-text-color), var(--dark-text-color));
+  padding: 10px;
+  text-decoration: none;
+}
+
+#button2 {
+  /* centering the content inside first */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 0.5rem;
+  padding: 0.1rem;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, #7ED6F3, #B39DDB);
+}
+
+#button2 a {
+  border-radius: 9px;
+  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
+  color: light-dark(var(--light-text-color), var(--dark-text-color));
+  padding: 10px;
+  text-decoration: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#ham-menu {
+  display: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#intro-section {
+  width: 50%;
+}
+
+#intro-section h1 {
+  margin: 0;
+}
+
+#logo {
+  background-color: grey;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+}
+
+#logo-text {
+  display: none;
+}
+
+main {
+  display: flex;
+  margin-top: 20px;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#two-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  #body-image {
+    background-color: grey;
+    border-radius: 5px;
+    height: 10rem;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  header {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  #hammed-nav {
+    background-color: #222222;
+    border-radius: 20px;
+    display: none;
+    opacity: 0.0;
+    padding-bottom: 15px;
+    padding-left: 40%;
+    padding-right: 35%;
+    padding-top: 15px;
+    position: absolute;
+    transition: all 2.3s;
+    visibility: hidden;
+
+    /* centering */
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+  }
+
+  #hammed-nav.active {
+    visibility: visible;
+    display: block;
+    opacity: 1.0;
+    transition: all 2.3s;
+  }
+
+  #ham-menu {
+    display: block;
+    transform: translateY(48%);
+    z-index: 1;
+  }
+
+  #ham-menu.active {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+  }
+
+  #ham-menu div {
+    background-color: #B39DDB;
+    border-radius: 20px;
+    height: 5px;
+    margin-top: 3px;
+    width: 1.7rem;
+    transition: all 0.3s;
+  }
+
+  #ham-menu.active div:nth-child(1) {
+    transform: translateY(150%) rotate(45deg);
+  }
+
+  #ham-menu.active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  #ham-menu.active div:nth-child(3) {
+    transform: translateY(-150%) rotate(-45deg);
+  }
+
+  #intro-section {
+    width: 100%;
+  }
+
+  #logo-text {
+    display: block;
+    color: red;
+    font-family: 'Josefin Sans';
+    margin-top: auto;
+    margin-bottom: auto;
+
+    /* centering */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+  }
+
+  main {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
