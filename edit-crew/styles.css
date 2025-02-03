@@ -150,6 +150,12 @@ body {
     border-width: 0.15rem;
 }
 
+#crown-svg {
+    fill: rgb(24, 173, 241);
+    rotate: 30deg;
+    transform: translate(-0.95rem, -0.15rem);
+}
+
 .dismiss-btn {
     background-color: red;
     display: block;
@@ -167,9 +173,9 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 67.5rem;
 }
 
 #logo {
@@ -190,14 +196,40 @@ main {
     margin-right: auto;
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
+nav hr {
+    display: none;
 }
 
-nav ul li {
-    padding-left: 10px;
-    padding-right: 10px;
+nav>ul {
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+    align-items: center;
+    height: 100%;
+}
+
+nav>ul>li {
+    height: 100%;
+    align-items: center;
+    margin-left: 0.63rem;
+    margin-right: 0.63rem;
+}
+
+nav>ul>li>a {
+    align-items: center;
+    border-radius: 0.7rem;
+    color: light-dark(var(--light-text-color), var(--dark-text-color));
+    display: flex;
+    height: 100%;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    padding-bottom: 0.05rem;
+    padding-top: 0.05rem;
+    text-decoration: none;
+}
+
+nav>ul>li>a:hover {
+    background-color: #333333;
 }
 
 .role-label {
@@ -235,49 +267,16 @@ nav ul li {
 
 @media (max-width: 640px) {
     header {
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-top: 10px;
+        margin-left: 0.65rem;
+        margin-right: 0.65rem;
+        margin-top: 0.65rem;
         position: relative;
-    }
-
-    #hammed-nav {
-        background-color: #222222;
-        border-radius: 20px;
-        display: none;
-        opacity: 0.0;
-        padding-bottom: 15px;
-        padding-left: 40%;
-        padding-right: 35%;
-        padding-top: 15px;
-        position: absolute;
-        transition: all 2.3s;
-        visibility: hidden;
-
-        /* centering */
-        left: 0;
-        right: 0;
-        margin-inline: auto;
-        width: fit-content;
-    }
-
-    #hammed-nav.active {
-        visibility: visible;
-        display: block;
-        opacity: 1.0;
-        transition: all 2.3s;
     }
 
     #ham-menu {
         display: block;
         transform: translateY(48%);
         z-index: 1;
-    }
-
-    #ham-menu.active {
-        position: absolute;
-        left: 5%;
-        top: 20%;
     }
 
     #ham-menu div {
@@ -299,6 +298,61 @@ nav ul li {
 
     #ham-menu.active div:nth-child(3) {
         transform: translateY(-150%) rotate(-45deg);
+    }
+
+    #hammed-nav {
+        background-color: #222222;
+        border-radius: 1.25rem;
+        display: block;
+        opacity: 0.0;
+        padding-bottom: 0.8rem;
+        padding-left: 0;
+        padding-top: 0.8rem;
+        position: absolute;
+        transition: all 0.3s;
+        visibility: hidden;
+
+        margin-top: 1rem;
+
+        height: auto;
+
+        /* centering */
+        left: 0;
+        right: 0;
+
+        text-align: center;
+    }
+
+    #hammed-nav hr {
+        display: block;
+    }
+
+    #hammed-nav li {
+        display: block;
+    }
+
+    #hammed-nav li hr {
+        border: none;
+        border-top: 0.15rem solid #444444;
+    }
+
+    #hammed-nav li>a {
+        border-radius: 0;
+        display: block;
+        height: 100%;
+        padding-bottom: 0.2rem;
+        padding-top: 0.2rem;
+        width: 100%;
+    }
+
+    #hammed-nav li>a :hover {
+        background-color: #444444;
+    }
+
+    #hammed-nav.active {
+        visibility: visible;
+        opacity: 1.0;
+        transition: all 0.3s;
     }
 
     #logo-text {
