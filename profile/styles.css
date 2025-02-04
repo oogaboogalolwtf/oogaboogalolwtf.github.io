@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @property --dark-bg-color {
     syntax: "<color>";
@@ -37,7 +38,7 @@ body {
 
 #bottom {
     position: fixed;
-    bottom: 20px;
+    bottom: 1.25rem;
 
     /* centering */
     left: 50%;
@@ -47,22 +48,25 @@ body {
 #bottom button {
     background: linear-gradient(to bottom, #7ED6F3, #B39DDB);
     border: none;
-    border-radius: 10px;
+    border-radius: 0.63rem;
     cursor: pointer;
-    padding: 1px;
+    padding: 0.06rem;
 }
 
 #bottom button span {
     background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
-    border-radius: 10px;
+    border-radius: 0.63rem;
     display: block;
     font-size: 1rem;
-    padding: 7px;
+    padding: 0.44rem;
 }
 
 .circ {
     background-color: #B39DDB;
-    border-radius: 9999px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 9999rem;
     height: 3rem;
     width: 3rem;
 
@@ -142,6 +146,13 @@ body {
     transform: translate(-0.95rem, -0.15rem);
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.63rem;
+    margin-top: 0.63rem;
+}
+
 #ham-menu {
     display: none;
 }
@@ -158,7 +169,7 @@ header {
     background-color: grey;
     width: 3rem;
     height: 3rem;
-    border-radius: 9999px;
+    border-radius: 9999rem;
 }
 
 #logo-text {
@@ -166,9 +177,10 @@ header {
 }
 
 main {
-    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 67.5rem;
+    min-height: 90vh;
 }
 
 main>h1 {
@@ -223,7 +235,7 @@ nav>ul>li>a:hover {
     color: red;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 40rem) {
     header {
         margin-left: 0.65rem;
         margin-right: 0.65rem;
@@ -239,9 +251,9 @@ nav>ul>li>a:hover {
 
     #ham-menu div {
         background-color: #B39DDB;
-        border-radius: 20px;
-        height: 5px;
-        margin-top: 3px;
+        border-radius: 1.25rem;
+        height: 0.31rem;
+        margin-top: 0.19rem;
         width: 1.7rem;
         transition: all 0.3s;
     }
@@ -333,5 +345,11 @@ nav>ul>li>a:hover {
 
     #public-crew {
         grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 25rem) {
+    #public-crew {
+        grid-template-columns: auto;
     }
 }

@@ -33,61 +33,7 @@
 body {
   background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
   color: light-dark(var(--light-text-color), var(--dark-text-color));
-  /* font-family: "Josefin Sans", serif; */
   font-family: 'Inter';
-}
-
-#body-image {
-  background-color: grey;
-  border-radius: 0.63rem;
-  margin-left: 0.63rem;
-  width: 50%;
-  height: fit-content;
-}
-
-#button1 {
-  /* centering the content inside first */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0.1rem;
-  border-radius: 0.63rem;
-  background-image: linear-gradient(to bottom, #7ED6F3, #B39DDB);
-}
-
-#button1 a {
-  border-radius: 0.56rem;
-  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
-  color: light-dark(var(--light-text-color), var(--dark-text-color));
-  padding: 0.63rem;
-  text-decoration: none;
-}
-
-#button2 {
-  /* centering the content inside first */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: 0.5rem;
-  padding: 0.1rem;
-  border-radius: 0.63rem;
-  background-image: linear-gradient(to bottom, #7ED6F3, #B39DDB);
-}
-
-#button2 a {
-  border-radius: 0.56rem;
-  background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
-  color: light-dark(var(--light-text-color), var(--dark-text-color));
-  padding: 0.63rem;
-  text-decoration: none;
-}
-
-#crown-svg {
-  fill: rgb(24, 173, 241);
-  rotate: 30deg;
-  transform: translate(-0.95rem, -0.15rem);
 }
 
 footer {
@@ -109,14 +55,6 @@ header {
   max-width: 67.5rem;
 }
 
-#intro-section {
-  width: 50%;
-}
-
-#intro-section h1 {
-  margin: 0;
-}
-
 #logo {
   background-image: url('/logo.png');
   background-repeat: no-repeat;
@@ -133,7 +71,6 @@ header {
 }
 
 main {
-  display: flex;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.25rem;
@@ -177,22 +114,8 @@ nav>ul>li>a:hover {
   background-color: #333333;
 }
 
-#two-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 @media (max-width: 25rem) {
-  #body-image {
-    background-color: grey;
-    border-radius: 0.31rem;
-    margin-left: 0;
-    margin-top: 0.63rem;
-    width: 100%;
-  }
-
   header {
     margin-left: 0.65rem;
     margin-right: 0.65rem;
@@ -280,10 +203,6 @@ nav>ul>li>a:hover {
     visibility: visible;
     opacity: 1.0;
     transition: all 0.3s;
-  }
-
-  #intro-section {
-    width: 100%;
   }
 
   #logo-text {

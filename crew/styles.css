@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @property --dark-bg-color {
     syntax: "<color>";
@@ -49,11 +50,11 @@ body {
 .crew-item {
     align-items: center;
     background-color: #2f2f2f;
-    border-radius: 10px;
+    border-radius: 0.63rem;
     display: flex;
-    margin: 10px;
-    max-width: 300px;
-    padding: 10px;
+    margin: 0.63rem;
+    max-width: 18.75rem;
+    padding: 0.63rem;
 }
 
 .crew-item-pic {
@@ -62,8 +63,8 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 
-    border-radius: 9999px;
-    margin-right: 10px;
+    border-radius: 9999rem;
+    margin-right: 0.63rem;
 
     height: 4rem;
     width: 4rem;
@@ -93,7 +94,7 @@ body {
 }
 
 #crew-title {
-    margin-left: 30px;
+    margin-left: 1.88rem;
 
     font-size: 1.5rem;
     font-weight: bold;
@@ -101,7 +102,14 @@ body {
     text-decoration-color: aqua;
     text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 0.06rem;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.63rem;
+    margin-top: 0.63rem;
 }
 
 #ham-menu {
@@ -120,11 +128,19 @@ header {
     background-color: grey;
     width: 3rem;
     height: 3rem;
-    border-radius: 9999px;
+    border-radius: 9999rem;
 }
 
 #logo-text {
     display: none;
+}
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.25rem;
+    max-width: 67.5rem;
+    min-height: 90vh;
 }
 
 nav hr {
@@ -163,7 +179,7 @@ nav>ul>li>a:hover {
     background-color: #333333;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 32rem) {
     #crew-container {
         display: grid;
         grid-template-columns: auto auto;
@@ -184,9 +200,9 @@ nav>ul>li>a:hover {
 
     #ham-menu div {
         background-color: #B39DDB;
-        border-radius: 20px;
-        height: 5px;
-        margin-top: 3px;
+        border-radius: 1.25rem;
+        height: 0.31rem;
+        margin-top: 0.19rem;
         width: 1.7rem;
         transition: all 0.3s;
     }
@@ -274,5 +290,11 @@ nav>ul>li>a:hover {
         top: 0;
         bottom: 0;
         height: fit-content;
+    }
+}
+
+@media (max-width: 25rem) {
+    #crew-container {
+        grid-template-columns: auto;
     }
 }

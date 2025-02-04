@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @property --dark-bg-color {
     syntax: "<color>";
@@ -37,7 +38,7 @@ body {
 
 #bottom {
     position: fixed;
-    bottom: 20px;
+    bottom: 1.25rem;
 
     /* centering */
     left: 50%;
@@ -47,17 +48,17 @@ body {
 #bottom button {
     background: linear-gradient(to bottom, #7ED6F3, #B39DDB);
     border: none;
-    border-radius: 10px;
+    border-radius: 0.63rem;
     cursor: pointer;
-    padding: 1px;
+    padding: 0.06rem;
 }
 
 #bottom button span {
     background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
-    border-radius: 10px;
+    border-radius: 0.63rem;
     display: block;
     font-size: 1rem;
-    padding: 7px;
+    padding: 0.44rem;
 }
 
 
@@ -71,11 +72,11 @@ body {
 .crew-item {
     align-items: center;
     background-color: #2f2f2f;
-    border-radius: 10px;
+    border-radius: 0.63rem;
     display: flex;
-    margin: 10px;
-    max-width: 300px;
-    padding: 10px;
+    margin: 0.63rem;
+    max-width: 18.75rem;
+    padding: 0.63rem;
 
     position: relative;
 }
@@ -87,7 +88,7 @@ body {
     height: 2rem;
     padding: 0.35rem;
 
-    border-radius: 9999px;
+    border-radius: 9999rem;
     right: -0.5rem;
     top: -0.5rem;
     cursor: pointer;
@@ -98,8 +99,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    border-radius: 9999px;
-    margin-right: 10px;
+    border-radius: 9999rem;
+    margin-right: 0.63rem;
 
     height: 4rem;
     width: 4rem;
@@ -116,11 +117,11 @@ body {
 .crew-item-text-name {
     font-size: 1.3rem;
     font-weight: 500;
-    margin-bottom: 5px;
+    margin-bottom: 0.31rem;
 }
 
 .crew-item-text-role {
-    margin-left: 5px;
+    margin-left: 0.31rem;
     color: grey;
 }
 
@@ -128,7 +129,7 @@ body {
     background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
     border: none;
     padding: 0.5rem;
-    margin-left: 30px;
+    margin-left: 1.88rem;
 
     font-size: 1.5rem;
     font-weight: bold;
@@ -136,7 +137,7 @@ body {
     text-decoration-color: aqua;
     text-decoration-line: underline;
     text-decoration-style: solid;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 0.06rem;
 }
 
 #crew-title:disabled {
@@ -166,6 +167,13 @@ body {
     padding: 0.7rem;
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.63rem;
+    margin-top: 0.63rem;
+}
+
 #ham-menu {
     display: none;
 }
@@ -182,7 +190,7 @@ header {
     background-color: grey;
     width: 3rem;
     height: 3rem;
-    border-radius: 9999px;
+    border-radius: 9999rem;
 }
 
 #logo-text {
@@ -190,10 +198,11 @@ header {
 }
 
 main {
-    margin-top: 20px;
-    max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1.25rem;
+    max-width: 67.5rem;
+    min-height: 90vh;
 }
 
 nav hr {
@@ -259,13 +268,12 @@ nav>ul>li>a:hover {
     margin: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 32rem) {
     #crew-container {
+        display: grid;
         grid-template-columns: auto auto;
     }
-}
 
-@media (max-width: 640px) {
     header {
         margin-left: 0.65rem;
         margin-right: 0.65rem;
@@ -281,9 +289,9 @@ nav>ul>li>a:hover {
 
     #ham-menu div {
         background-color: #B39DDB;
-        border-radius: 20px;
-        height: 5px;
-        margin-top: 3px;
+        border-radius: 1.25rem;
+        height: 0.31rem;
+        margin-top: 0.19rem;
         width: 1.7rem;
         transition: all 0.3s;
     }
@@ -371,5 +379,11 @@ nav>ul>li>a:hover {
         top: 0;
         bottom: 0;
         height: fit-content;
+    }
+}
+
+@media (max-width: 25rem) {
+    #crew-container {
+        grid-template-columns: auto;
     }
 }
