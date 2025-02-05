@@ -27,7 +27,7 @@
 }
 
 :root {
-    color-scheme: light dark;
+    color-scheme: dark;
 }
 
 body {
@@ -38,7 +38,7 @@ body {
 
 #crew-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #crew-info {
@@ -125,7 +125,9 @@ header {
 }
 
 #logo {
-    background-color: grey;
+    background-image: url('/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 3rem;
     height: 3rem;
     border-radius: 9999rem;
@@ -181,8 +183,13 @@ nav>ul>li>a:hover {
 
 @media (max-width: 32rem) {
     #crew-container {
-        display: grid;
-        grid-template-columns: auto auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .crew-item {
+        min-width: 85vw;
     }
 
     header {
@@ -293,8 +300,8 @@ nav>ul>li>a:hover {
     }
 }
 
-@media (max-width: 25rem) {
+@media (max-width: 50rem) {
     #crew-container {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr 1fr;
     }
 }

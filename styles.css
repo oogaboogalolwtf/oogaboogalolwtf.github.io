@@ -27,13 +27,12 @@
 }
 
 :root {
-  color-scheme: light dark;
+  color-scheme: dark;
 }
 
 body {
   background-color: light-dark(var(--light-bg-color), var(--dark-bg-color));
   color: light-dark(var(--light-text-color), var(--dark-text-color));
-  /* font-family: "Josefin Sans", serif; */
   font-family: 'Inter';
 }
 

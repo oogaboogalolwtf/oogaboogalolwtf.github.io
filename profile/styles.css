@@ -27,7 +27,7 @@
 }
 
 :root {
-    color-scheme: light dark;
+    color-scheme: dark;
 }
 
 body {
@@ -166,10 +166,12 @@ header {
 }
 
 #logo {
-    background-color: grey;
-    width: 3rem;
-    height: 3rem;
+    background-image: url('/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 9999rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 #logo-text {
