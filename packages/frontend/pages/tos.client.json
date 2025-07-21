@@ -1,0 +1,1 @@
+{"name":"TocListItem","id":["frontend","lib/pages/tos.dart"],"import":"package:frontend/pages/tos.dart","params":[{"name":"id","isNamed":true,"decoder":"p['id']","encoder":"c.id"},{"name":"title","isNamed":true,"decoder":"p['title']","encoder":"c.title"},{"name":"desc","isNamed":true,"decoder":"p['desc']","encoder":"c.desc"}]}

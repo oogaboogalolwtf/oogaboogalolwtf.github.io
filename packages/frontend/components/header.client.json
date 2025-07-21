@@ -1,0 +1,1 @@
+{"name":"HamNavbar","id":["frontend","lib/components/header.dart"],"import":"package:frontend/components/header.dart","params":[{"name":"currPath","isNamed":true,"decoder":"p['currPath']","encoder":"c.currPath"}]}

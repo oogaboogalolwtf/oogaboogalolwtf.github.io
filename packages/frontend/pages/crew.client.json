@@ -1,0 +1,1 @@
+{"name":"Crew","id":["frontend","lib/pages/crew.dart"],"import":"package:frontend/pages/crew.dart","params":[{"name":"id","isNamed":true,"decoder":"p['id']","encoder":"c.id"}]}
