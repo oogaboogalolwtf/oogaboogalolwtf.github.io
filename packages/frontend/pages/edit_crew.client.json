@@ -1,1 +1,1 @@
-{"name":"EditCrew","id":["frontend","lib/pages/edit_crew.dart"],"import":"package:frontend/pages/edit_crew.dart","params":[{"name":"id","isNamed":true,"decoder":"p['id']","encoder":"c.id"}]}
+{"name":"EditCrew","id":["frontend","lib/pages/edit_crew.dart"],"import":"package:frontend/pages/edit_crew.dart","params":[]}

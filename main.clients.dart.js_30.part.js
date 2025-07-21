@@ -67,8 +67,8 @@ p=q%d
 if(q-p+d<t)return p}}}
 B.cs.prototype={}
 B.mP.prototype={
-ag(d){return new A.X(this.re(d),x.d)},
-re(d){var w=this
+ag(d){return new A.X(this.rd(d),x.d)},
+rd(d){var w=this
 return function(){var v=d
 var u=0,t=1,s=[],r,q,p,o,n
 return function $async$ag(e,f,g){if(f===1){s.push(g)
@@ -83,7 +83,7 @@ case 2:u=3
 return e.b=K.rU(new K.eC(new B.rw(w),null)),1
 case 3:return 0
 case 1:return e.c=s.at(-1),3}}}},
-q_(d,e){var w,v,u,t,s,r,q,p,o,n,m=null
+pZ(d,e){var w,v,u,t,s,r,q,p,o,n,m=null
 x.M.a(e)
 w=x.U
 v=new M.ca(m,w)
@@ -105,13 +105,13 @@ return A.aX($.id().d8("POST",t,null,null,null),$async$fN)
 case 3:s=e
 r=s.b
 if(r!==201)throw A.f(new B.ie(r))
-u=A.v(x.P.a(I.T.eB(D.xJ(D.xt(s.e)).bv(s.w),null)).k(0,"id"))
+u=A.u(x.P.a(I.T.eB(D.xJ(D.xt(s.e)).bv(s.w),null)).k(0,"id"))
 w=1
 break
 case 1:return A.aZ(u,v)}})
 return A.b_($async$fN,v)},
-fP(d){return this.rK(d)},
-rK(d){var w=0,v=A.b0(x.H),u=this,t,s,r
+fP(d){return this.rJ(d)},
+rJ(d){var w=0,v=A.b0(x.H),u=this,t,s,r
 var $async$fP=A.aS(function(e,f){if(e===1)return A.aY(f,v)
 while(true)switch(w){case 0:s=D.l2().$2("api.brainiacs.in","/crews/"+d.b)
 w=2
@@ -122,7 +122,7 @@ r=u.a
 r===$&&A.c()
 r.aK()
 t=J.oG(r.gaA().gaL().a)
-I.b.tS(t,new B.oW(d))
+I.b.tR(t,new B.oW(d))
 r.sbt(A.k(u).h("a3<b5.0>").a(D.fE(new B.bQ(t),x.L)))
 return A.aZ(null,v)}})
 return A.b_($async$fP,v)},
@@ -196,7 +196,7 @@ case 4:k=x.i
 j=H.af(A.b([F.et(C.i2,null),D.dj(A.b([F.b3(C.h9,null,null,null),C.kX],k),null,null,"add-crew-btn",new B.ru(r),null)],k),null,null,null,"profile-header",null,null)
 o=A.b([],k)
 for(l=J.aM(l.a),n=w.a;l.t();){m=l.gF()
-o.push(n.q_(m,new B.rv(r,m)))}u=6
+o.push(n.pZ(m,new B.rv(r,m)))}u=6
 return e.b=F.eu(A.b([j,H.af(o,null,null,null,"profile-crews-container",null,null)],k),null,"profile-main"),1
 case 6:case 1:return 0
 case 2:return e.c=s.at(-1),3}}}},
@@ -284,7 +284,7 @@ B.rt.prototype={
 $0(){this.a.remove()},
 $S:1}
 B.rv.prototype={
-$0(){this.a.fP(this.b).rl(new B.rs())},
+$0(){this.a.fP(this.b).rk(new B.rs())},
 $S:0}
 B.rs.prototype={
 $1(d){var w,v,u,t,s,r,q,p,o,n
@@ -445,9 +445,9 @@ $S:z+1}
 B.oV.prototype={
 $1(d){var w,v
 x.P.a(d)
-w=A.v(d.k(0,"crewID"))
+w=A.u(d.k(0,"crewID"))
 v=J.oC(x.j.a(d.k(0,"images")),x.T)
-return new B.cs(A.v(d.k(0,"name")),w,v)},
+return new B.cs(A.u(d.k(0,"name")),w,v)},
 $S:z+2}
 B.oX.prototype={
 $0(){var w=0,v=A.b0(x.L),u,t=this,s,r,q,p,o
@@ -461,7 +461,7 @@ p=A.bE(q.getItem("state"))
 if(p==null){p=B.FW(128)
 q.setItem("state",p)}r.a(r.a(s.window).location).replace("https://api.brainiacs.in/oauth?state="+p)}o=B
 w=4
-return A.aX(t.a.fs(A.v(x.m.a(b.G.document).cookie)),$async$$0)
+return A.aX(t.a.fs(A.u(x.m.a(b.G.document).cookie)),$async$$0)
 case 4:u=new o.bQ(e)
 w=1
 break
@@ -476,9 +476,9 @@ v(B.e_,D.dZ)
 v(B.py,A.dS)})()
 A.bV(b.typeUniverse,JSON.parse('{"mP":{"as":[],"B":[]},"e_":{"dZ":["bQ"],"cm":["bQ"],"b5":["bQ"],"b5.0":"bQ","cm.0":"bQ"},"ie":{"ay":[]},"iq":{"ay":[]}}'))
 var y={b:"Something is wrong on our side. Please contact the admin(s) so that they can take a look.\n\nE-mail: vgshubham49@gmail.com.\nError log: ",d:"Unauthorized! Maybe your token has expired. Try logging out and in again.\n\nIf the problem still persists, then contact the admin.\n\nE-mail: vgshubham49@gmail.com.\nError log: "}
-var x=(function rtii(){var w=A.u
+var x=(function rtii(){var w=A.v
 return{W:w("a3<bQ>"),i:w("o<B>"),m:w("D"),U:w("ca<D>"),g:w("n<cs>"),j:w("n<@>"),P:w("z<i,@>"),r:w("cs"),L:w("bQ"),S:w("aG<e_>"),N:w("i"),d:w("X<B>"),y:w("V"),z:w("D?"),T:w("i?"),H:w("~"),M:w("~()")}})();(function constants(){var w=a.makeConstList
-C.cy=new D.aF(!1,null,null,null,A.u("aF<bQ>"))
+C.cy=new D.aF(!1,null,null,null,A.v("aF<bQ>"))
 C.cY=new B.py(0,"none")
 C.lm=new E.L("Share Crew",null)
 C.dB=A.b(w([C.lm]),x.i)
@@ -492,14 +492,14 @@ C.lb=new E.L("Edit",null)
 C.hV=A.b(w([C.lb]),x.i)
 C.l_=new E.L("All Crews",null)
 C.i2=A.b(w([C.l_]),x.i)
-C.j3=A.b(w([]),A.u("o<cs>"))
+C.j3=A.b(w([]),A.v("o<cs>"))
 C.kY=new G.aE(!1,"/images/menu.svg",null,null)
 C.kw=A.b(w([C.kY]),x.i)
 C.kX=new G.aE(!1,"/images/add.svg",null,null)})();(function staticFields(){$.yk=!1})();(function lazyInitializers(){var w=a.lazyFinal
 w($,"IB","B7",()=>{var v=new B.uw(new DataView(new ArrayBuffer(A.FF(8))))
 v.nA()
 return v})
-w($,"JN","BO",()=>D.wt(new B.vw(),A.u("e_"),x.L))})()};
+w($,"JN","BO",()=>D.wt(new B.vw(),A.v("e_"),x.L))})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.clients.dart.js_30",e:"endPart",h:b})})($__dart_deferred_initializers__,"8B/49WUPdL14dNukPjyzqnktIAI=");
+a.eventLog.push({p:"main.clients.dart.js_30",e:"endPart",h:b})})($__dart_deferred_initializers__,"6JsKecqn0DIAomi4nvgcUJyqmSU=");
 //# sourceMappingURL=main.clients.dart.js_30.part.js.map
