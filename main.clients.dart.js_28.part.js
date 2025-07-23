@@ -17267,7 +17267,7 @@ l=B.wi(A.b([new G.L(n.a,null)],m),C.kC,"shrink-textarea","title-input")
 k=y.N
 k=A.bj(["placeholder","Describe your crew...","maxlength","120"],k,k)
 v=13
-return e.b=H.d3(A.b([new K.aB(!1,"/images/heart.svg",null,null),l,B.wi(A.b([new G.L(n.b,null)],m),k,"shrink-textarea","desc-input"),x.a.nR(n.c,s),I.a8(A.b([F.dn(C.hf,null,null,null,new B.pH(s),null),F.dn(C.ei,null,null,null,new B.pI(s),null)],m),null,null,null,"edit-member-buttons",null,null)],m),null,"crew-view-main"),1
+return e.b=H.d3(A.b([new K.aB(!1,"/images/heart.svg",null,null),l,B.wi(A.b([new G.L(n.b,null)],m),k,"shrink-textarea","desc-input"),x.a.nR(n.c,s),I.a8(A.b([F.dn(C.hf,null,null,null,new B.pH(s),null),F.dn(C.ei,null,null,"save-changes-btn",new B.pI(s),null)],m),null,null,null,"edit-member-buttons",null,null)],m),null,"crew-view-main"),1
 case 13:case 1:return 0
 case 2:return e.c=t.at(-1),3}}}},
 $S:12}
@@ -18169,5 +18169,5 @@ x($,"Jj","xZ",()=>B.DO(1))
 x($,"Jk","Bw",()=>{var v=$.xZ()
 return B.CH(v.gD(v))})})()};
 ((a,b)=>{a[b]=a.current
-a.eventLog.push({p:"main.clients.dart.js_28",e:"endPart",h:b})})($__dart_deferred_initializers__,"JjCa9dATHLiayg6K3hTVAoQyegM=");
+a.eventLog.push({p:"main.clients.dart.js_28",e:"endPart",h:b})})($__dart_deferred_initializers__,"TguXzxl0w+XXOQ9695x0jSC0CCw=");
 //# sourceMappingURL=main.clients.dart.js_28.part.js.map
